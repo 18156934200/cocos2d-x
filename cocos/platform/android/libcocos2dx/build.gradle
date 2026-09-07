@@ -18,6 +18,11 @@ android {
         manifest.srcFile "AndroidManifest.xml"
     }
 
+    // AGP 8 默认关闭 AIDL;华为游戏调优接口(com.enhance.gameservice)依赖 AIDL 生成
+    buildFeatures {
+        aidl true
+    }
+
     buildTypes {
         release {
             minifyEnabled true
